@@ -12,6 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AlquileresController {
     
+    @GetMapping
+    public String inicio(){
+        return "Ingresar a /propiedad/152365";
+    }
+    
     @GetMapping("/propiedad/{id}")
     @ResponseBody
     public PropiedadDTO devolverPropiedad(@PathVariable Long id){
